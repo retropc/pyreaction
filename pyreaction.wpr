@@ -1,0 +1,14 @@
+#!wing
+#!version=2.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+proj.file-list = [loc('board.py'),
+                  loc('boarditem.py'),
+                  loc('player.py'),
+                  loc('pyreaction.py'),
+                  loc('square.py'),
+                  loc('textboard.py')]
+proj.file-type = 'shared'
+proj.main-file = loc('pyreaction.py')
