@@ -5,7 +5,6 @@
 ##################################################################
 [project attributes]
 proj.file-list = [loc('board.py'),
-                  loc('boarditem.py'),
                   loc('player.py'),
                   loc('pyreaction.py'),
                   loc('square.py'),
