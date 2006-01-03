@@ -10,7 +10,7 @@ class TkBoard(Board):
       for y in range(0, self.height):
         square = self.board[x][y]
         if square.player:
-          p = pieces[square.player.number]
+          p = pieces[square.player.number - 1]
         
         if square.count == 0:
           v = "   \n   \n   "

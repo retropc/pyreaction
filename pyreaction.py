@@ -17,13 +17,16 @@ print
 print "Copyright (C) 2005-2006 Chris Porter."
 
 def usage():
+  import os
+  print 
+  print "Usage: %s [OPTION]" % os.path.basename(sys.argv[0])
   print
-  print "Args:"
+  print "Arguments:"
   print
-  print "-h|--help            This screen"
-  print "-t|--text-mode       Text mode (default false)"
-  print "-p|--players=        Set number of players, from 2 to 9 (default 2)"
-  print "-d|--dimensions=     Set board dimensions (default 5x5)"
+  print "-d, --dimensions=     Set board dimensions (default 5x5)."
+  print "-h, --help            This help screen."
+  print "-p, --players=        Set number of players, from 2 to 9 (default 2)."
+  print "-t, --text-mode       Text mode (default false)."
   
 textmode = False
 players = 2
@@ -62,6 +65,13 @@ for o, a in opts:
     width = int(m.group(1))
     height = int(m.group(2))
     
+    
+if players * 2 > width * height:
+  print
+  print "You must have at least two squares per player."
+  usage()
+  sys.exit(1)
+  
 p = []
 for i in range(0, players):
   p.append(Player(i + 1))

@@ -28,7 +28,7 @@ class TextBoard(Board):
         if square.count == 0:
           value = value2 = "  "
         else:
-          p = pieces[square.player.number]
+          p = pieces[square.player.number - 1]
           if square.count == 1:
             value = p + " "
             value2 = "  "
