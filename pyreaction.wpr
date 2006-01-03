@@ -9,6 +9,9 @@ proj.file-list = [loc('board.py'),
                   loc('pyreaction.py'),
                   loc('square.py'),
                   loc('textboard.py'),
-                  loc('textgame.py')]
+                  loc('game.py'),
+                  loc('textgame.py'),
+                  loc('tkboard.py'),
+                  loc('tkgame.py')]
 proj.file-type = 'shared'
 proj.main-file = loc('pyreaction.py')

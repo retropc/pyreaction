@@ -3,5 +3,5 @@ class Game:
     self.boardclass = boardclass
   
   def start_game(self, width, height, players):
-    self.board = self.boardclass(width, height, players)
+    self.board = self.boardclass(self, width, height, players)
     

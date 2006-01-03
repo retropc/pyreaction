@@ -1,7 +1,8 @@
 from square import *
 
 class Board:
-  def __init__(self, width, height, players):
+  def __init__(self, parent, width, height, players):
+    self.parent = parent
     self.width = width
     self.height = height
     self.board = []
