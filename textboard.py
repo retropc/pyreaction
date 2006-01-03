@@ -11,7 +11,7 @@ class TextBoard(Board):
     dout = "  "
     
     for i in range(0, self.width):
-      dout = dout + " %s   " % chr(ord('A') + i)
+      dout = dout + "  %s  " % chr(ord('A') + i)
       sdi = sdi + "-----"
       
     print dout

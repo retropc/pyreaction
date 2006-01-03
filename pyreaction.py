@@ -10,11 +10,12 @@ print "|| Reaction v" + VERSION
 print
 print "Copyright (C) 2005 Chris Porter."
 
-p = [Player(1), Player(2), Player(3)]
-b = TextBoard(8, 6, p)
+p = [Player(1), Player(2)]
+b = TextBoard(5, 5, p)
 
 while not b.winner:
   import re
+  
   
   pmove = raw_input("Player %d (%s) -- enter move: " % (b.currentplayer.number, pieces[b.currentplayer.number]))
   

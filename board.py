@@ -22,10 +22,9 @@ class Board:
     # virtual
     pass
 
-
   def move(self, x, y, depth = 0):
-    if depth > 20:
-      raise AssertionError("too much recursion")
+    if depth > self.width * self.height * 50:
+      raise AssertionError("too much recursion") #winner code goes ere
     
     if x < 0 or x >= self.width or y < 0 or y >= self.height:
       return False
@@ -52,6 +51,14 @@ class Board:
         self.move(x + c[0], y + c[1], depth + 1)
         
     if depth == 0:
-      self.on_boardchange();
+      self.on_boardchange()      
+      self.next_player()
+    
     return True
   
+  def next_player(self):
+    # this needs to be improved
+    index = self.players.index(self.currentplayer)
+    index = (index + 1) % len(self.players)
+    self.currentplayer = self.players[index]
+    
