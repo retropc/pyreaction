@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from textboard import *
 from player import *
 
